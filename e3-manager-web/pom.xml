@@ -17,6 +17,10 @@
 		</dependency>
 		<!-- JSP相关 -->
 		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 		</dependency>

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import cn.e3mall.common.pojo.DataGridResult;
+import cn.e3mall.common.pojo.E3Result;
 import cn.e3mall.pojo.TbItem;
 import cn.e3mall.service.ItemService;
 
@@ -22,4 +23,26 @@ public class ItemController {
 		DataGridResult result = itemService.getItemList(page,rows);
 		return result;
 	}
+	
+	@RequestMapping("/item/save")
+	@ResponseBody
+	public E3Result addItem(TbItem item,String desc){
+		E3Result result = itemService.addItem(item,desc);
+		return result;
+	}
+	
+	@RequestMapping("/item/update")
+	@ResponseBody
+	public E3Result updateItem(TbItem item,String desc){
+		E3Result result = itemService.updateItem(item,desc);
+		return result;
+	}
+	@RequestMapping("/item/delete")
+	@ResponseBody
+	public E3Result deleteItem(String ids){
+		E3Result result = itemService.deleteItem(ids);
+		return result;
+	}
+	
+	
 }

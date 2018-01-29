@@ -66,7 +66,7 @@ var E3 = {
     initPicUpload : function(data){
     	$(".picFileUpload").each(function(i,e){
     		var _ele = $(e);
-    		_ele.siblings("div.pics").remove();
+    		_ele.siblings("div.pics").remove();//siblings 获取兄弟级元素
     		_ele.after('\
     			<div class="pics">\
         			<ul></ul>\
